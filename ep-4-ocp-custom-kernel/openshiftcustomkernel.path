@@ -1,0 +1,9 @@
+[Unit]
+Description=Monitor the file openshiftcustomkernel.conf for changes
+
+[Path]
+PathChanged=/etc/openshiftcustomkerneld/openshiftcustomkernel.conf
+Unit=openshiftcustomkernel.service
+
+[Install]
+WantedBy=multi-user.target
