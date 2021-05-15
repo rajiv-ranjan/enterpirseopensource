@@ -1,0 +1,18 @@
+UI vesamenu.c32
+MENU BACKGROUND        bg-ocp.png
+MENU COLOR sel         4
+MENU COLOR title       1
+TIMEOUT 120
+PROMPT 0
+
+LABEL Bootstrap Installation
+ KERNEL /networkboot/rhcos/rhcos-live-kernel-x86_64
+ APPEND initrd=/networkboot/rhcos/rhcos-live-initramfs.x86_64.img coreos.inst=yes coreos.inst.install_dev=vda coreos.live.rootfs_url=http://192.168.100.243/rhcos/rhcos-live-rootfs.x86_64.img coreos.inst.ignition_url=http://192.168.100.243/ignition/bootstrap.ign
+
+LABEL Master Installation
+ KERNEL /networkboot/rhcos/rhcos-live-kernel-x86_64
+ APPEND initrd=/networkboot/rhcos/rhcos-live-initramfs.x86_64.img coreos.inst=yes coreos.inst.install_dev=vda coreos.live.rootfs_url=http://192.168.100.243/rhcos/rhcos-live-rootfs.x86_64.img coreos.inst.ignition_url=http://192.168.100.243/ignition/master.ign
+
+LABEL Worker Installation
+ KERNEL /networkboot/rhcos/rhcos-live-kernel-x86_64
+ APPEND initrd=/networkboot/rhcos/rhcos-live-initramfs.x86_64.img coreos.inst=yes coreos.inst.install_dev=vda coreos.live.rootfs_url=http://192.168.100.243/rhcos/rhcos-live-rootfs.x86_64.img coreos.inst.ignition_url=http://192.168.100.243/ignition/worker.ign
