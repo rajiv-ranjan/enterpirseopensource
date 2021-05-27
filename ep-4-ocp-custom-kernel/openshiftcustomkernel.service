@@ -1,6 +1,8 @@
 [Unit]
 Description=check and replace default kernel
-After=kubelet.service
+Before=kublet.service
+After=rpm-ostreed.service
+After=network-online.target
 
 [Service]
 Type=simple
