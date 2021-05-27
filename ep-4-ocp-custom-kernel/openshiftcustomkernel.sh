@@ -64,20 +64,20 @@ if test -f /etc/openshiftcustomkerneld/openshiftcustomkernel.conf ;
 
         echo ""
         echo "###### Downloading target kernel core: $kernel_core"
-        echo "curl $fedora_download_base_url/${kernel_version_parts[0]}/${kernel_version_parts[1]}/$kernel_arch/$kernel_core.rpm --output $temp_folder/$kernel_core.rpm"
-        curl -s "$fedora_download_base_url"/"${kernel_version_parts[0]}"/"${kernel_version_parts[1]}"/"$kernel_arch"/"$kernel_core".rpm --output $temp_folder/"$kernel_core".rpm --retry 10 --retry-all-errors
+        echo "curl $fedora_download_base_url/${kernel_version_parts[0]}/${kernel_version_parts[1]}/$kernel_arch/$kernel_core.rpm --output $temp_folder/$kernel_core.rpm --retry 10"
+        curl -s "$fedora_download_base_url"/"${kernel_version_parts[0]}"/"${kernel_version_parts[1]}"/"$kernel_arch"/"$kernel_core".rpm --output $temp_folder/"$kernel_core".rpm --retry 10
         echo ""
         echo "###### Downloading target kernel modules: $kernel_modules"
-        echo "curl $fedora_download_base_url/${kernel_version_parts[0]}/${kernel_version_parts[1]}/$kernel_arch/$kernel_modules.rpm --output $temp_folder/$kernel_modules.rpm"
-        curl -s "$fedora_download_base_url"/"${kernel_version_parts[0]}"/"${kernel_version_parts[1]}"/"$kernel_arch"/"$kernel_modules".rpm --output $temp_folder/"$kernel_modules".rpm --retry 10 --retry-all-errors
+        echo "curl $fedora_download_base_url/${kernel_version_parts[0]}/${kernel_version_parts[1]}/$kernel_arch/$kernel_modules.rpm --output $temp_folder/$kernel_modules.rpm --retry 10"
+        curl -s "$fedora_download_base_url"/"${kernel_version_parts[0]}"/"${kernel_version_parts[1]}"/"$kernel_arch"/"$kernel_modules".rpm --output $temp_folder/"$kernel_modules".rpm --retry 10
         echo ""
         echo "###### Downloading target kernel modules extra: $kernel_modules_extra"
-        echo "curl $fedora_download_base_url/${kernel_version_parts[0]}/${kernel_version_parts[1]}/$kernel_arch/$kernel_modules_extra.rpm --output $temp_folder/$kernel_modules_extra.rpm"
-        curl -s "$fedora_download_base_url"/"${kernel_version_parts[0]}"/"${kernel_version_parts[1]}"/"$kernel_arch"/"$kernel_modules_extra".rpm --output $temp_folder/"$kernel_modules_extra".rpm --retry 10 --retry-all-errors
+        echo "curl $fedora_download_base_url/${kernel_version_parts[0]}/${kernel_version_parts[1]}/$kernel_arch/$kernel_modules_extra.rpm --output $temp_folder/$kernel_modules_extra.rpm --retry 10"
+        curl -s "$fedora_download_base_url"/"${kernel_version_parts[0]}"/"${kernel_version_parts[1]}"/"$kernel_arch"/"$kernel_modules_extra".rpm --output $temp_folder/"$kernel_modules_extra".rpm --retry 10
         echo ""
         echo "###### Downloading target kernel: $kernel"
-        echo "curl $fedora_download_base_url/${kernel_version_parts[0]}/${kernel_version_parts[1]}/$kernel_arch/$kernel.rpm --output $temp_folder/$kernel.rpm"
-        curl -s "$fedora_download_base_url"/"${kernel_version_parts[0]}"/"${kernel_version_parts[1]}"/"$kernel_arch"/"$kernel".rpm --output $temp_folder/"$kernel".rpm --retry 10 --retry-all-errors
+        echo "curl $fedora_download_base_url/${kernel_version_parts[0]}/${kernel_version_parts[1]}/$kernel_arch/$kernel.rpm --output $temp_folder/$kernel.rpm --retry 10"
+        curl -s "$fedora_download_base_url"/"${kernel_version_parts[0]}"/"${kernel_version_parts[1]}"/"$kernel_arch"/"$kernel".rpm --output $temp_folder/"$kernel".rpm --retry 10
         
         echo ""
         echo "###### Installing the target kernel"
